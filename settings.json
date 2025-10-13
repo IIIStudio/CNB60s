@@ -1,4 +1,21 @@
 {
-    "security.workspace.trust.banner": "never",
-    "security.workspace.trust.enabled": false
-  }
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.enabled": false,
+  "yaml.schemas": {
+    "https://docs.cnb.cool/conf-schema-zh.json": ".cnb.yml",
+    "https://docs.cnb.cool/tag-deploy-schema.json": "tag_deploy.yml"
+  },
+  "workbench.trustedDomains.promptInTrustedWorkspace": false,
+  "codingcopilot.welcomeMessage": "never",
+  "workbench.startupEditor": "none",
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "gitblame.inlineMessageEnabled": true,
+  "git.autorefresh": true,
+  "chat.commandCenter.enabled": false,
+  "yaml.customTags": [
+    "!reference sequence"
+  ],
+  "workbench.secondarysideBar.defaultvisibility": "hidden",
+  "git.enableSmartCommit": true
+}
