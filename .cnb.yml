@@ -6,3 +6,6 @@ $:
       services:
         - vscode
         - docker
+      stages:
+        - name: set code-server
+          script: ln -sf  /workspace/settings.json /root/.local/share/code-server/User/settings.json
