@@ -17,5 +17,7 @@
     "!reference sequence"
   ],
   "workbench.secondarysideBar.defaultvisibility": "hidden",
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false
 }
