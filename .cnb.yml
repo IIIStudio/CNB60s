@@ -6,6 +6,33 @@ $:
       services:
         - vscode
         - docker
+  "crontab: 28 05 * * *":
+    - name: 定时任务
+      stages: 
+        - name: 60s
+          script: |
+            python 60s.py latest
+            git add .
+            git commit -m "自动提交：$(date "+%Y-%m-%d %H:%M:%S")"
+            git push
+
+main:
+  push:
+    - services:
+        - docker
+      imports:
+        - https://cnb.cool/IIIStudio/key/-/blob/main/github/env.yml
       stages:
-        - name: set code-server
-          script: ln -sf  /workspace/settings.json /root/.local/share/code-server/User/settings.json
+        - name: 同步到GitHub
+          image: tencentcom/git-sync 
+          settings:
+            target_url: https://github.com/IIIStudio/CNB60s.git
+            auth_type: https
+            username: ${GIT_USERNAME} 
+            password: ${GIT_ACCESS_TOKEN}
+            branch: main
+            #force: false                   
+            #push_tags: false              
+            git_user: ${GIT_USERNAME}
+            git_email: ${GIT_EMAIL} 
+            #sync_strategy: "overwrite"
