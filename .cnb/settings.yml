@@ -11,5 +11,7 @@ knowledgeBase:
         例如：当前时间是2025-10-27，那么就是 2025-10-27.md
         需要先发送md里面的完整内容。
         然后分析
-
-  defaultRole: 60s
+    - name: 股神
+      prompt: |
+        分析新闻是否涨或者跌，写出理由！
+  defaultRole: 股神
