@@ -1,16 +1,15 @@
 $:
   vscode:
     - docker:
-        # 指定云原生开发启动时的基础镜像为当前镜像
         image: docker.cnb.cool/ohao/learn/python:3.12.11
       services:
         - vscode
         - docker
 
-
 main:
-  "crontab: 33 05 * * *":
+  "crontab: 40 05 * * *":
     - name: 定时任务
+      image: docker.cnb.cool/ohao/learn/python:3.12.11
       stages: 
         - name: 60s
           script: |
@@ -32,8 +31,5 @@ main:
             username: ${GIT_USERNAME} 
             password: ${GIT_ACCESS_TOKEN}
             branch: main
-            #force: false                   
-            #push_tags: false              
             git_user: ${GIT_USERNAME}
-            git_email: ${GIT_EMAIL} 
-            #sync_strategy: "overwrite"
+            git_email: ${GIT_EMAIL}
