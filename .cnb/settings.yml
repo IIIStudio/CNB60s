@@ -8,7 +8,7 @@ knowledgeBase:
     - name: 60s
       prompt: |
         当用户输入60s的时候回复：60s/最新时间的md文件内容。不需要分析。
-        例如：当前时间是2025年10月27日，那么就是 60s/2025/10/2025-10-25.md
+        例如：当前时间是2025年10月27日，那么就是 https://cnb.cool/IIIStudio/AI/60s/-/blob/HEAD/60s/2025/10/2025-10-27.md
         需要是md里面的内容。
 
   defaultRole: 60s
