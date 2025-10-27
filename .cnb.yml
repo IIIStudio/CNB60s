@@ -6,7 +6,10 @@ $:
       services:
         - vscode
         - docker
-  "crontab: 28 05 * * *":
+
+
+main:
+  "crontab: 33 05 * * *":
     - name: 定时任务
       stages: 
         - name: 60s
@@ -15,8 +18,6 @@ $:
             git add .
             git commit -m "自动提交：$(date "+%Y-%m-%d %H:%M:%S")"
             git push
-
-main:
   push:
     - services:
         - docker
