@@ -20,5 +20,6 @@
   "workbench.secondarysideBar.defaultvisibility": "hidden",
   "git.enableSmartCommit": true,
   "explorer.confirmDragAndDrop": false,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "codingcopilot.enableFloatShortcut": false
 }
