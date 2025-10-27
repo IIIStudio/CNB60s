@@ -7,11 +7,11 @@ $:
         - docker
 
 main:
-  "crontab: 40 05 * * *":
+  "crontab: 47 05 * * *":
     - name: 定时任务
-      image: docker.cnb.cool/ohao/learn/python:3.12.11
       stages: 
         - name: 60s
+          image: docker.cnb.cool/ohao/learn/python:3.12.11
           script: |
             python 60s.py latest
             git add .
