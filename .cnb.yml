@@ -33,3 +33,11 @@ main:
             branch: main
             git_user: ${GIT_USERNAME}
             git_email: ${GIT_EMAIL}
+    - stages: #启动流水线
+        - name: build knowledge base #名字
+          image: cnbcool/knowledge-base #知识库插件
+          settings: #知识库设置
+            embedding_model: hunyuan #知识库使用的基础模型
+            include: "**/**.md" #知识库包含的文件类型
+            exclude: "" #可以添加排除文件
+            chunk_size: 3000 #分片大小
