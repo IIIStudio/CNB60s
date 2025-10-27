@@ -2,3 +2,12 @@ workspace:
   launch:
     autoOpenWebIDE: true
 copyRepo:
+
+knowledgeBase:
+  roles:
+    - name: 60s
+      prompt: |
+        当用户输入60s的时候回复：./60s/最新时间的md文件内容。不需要分析。
+
+
+  defaultRole: 60s
