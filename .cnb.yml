@@ -12,6 +12,8 @@ main:
       stages: 
         - name: 60s
           image: docker.cnb.cool/ohao/learn/python:3.12.11
+          runner:
+            cpus: 1
           script: |
             python 60s.py latest
             git add .
