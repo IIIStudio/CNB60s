@@ -7,7 +7,7 @@ $:
         - docker
 
 main:
-  "crontab: 24 04 * * *":
+  "crontab: 24 01 * * *":
     - name: 定时任务
       stages: 
         - name: 60s
